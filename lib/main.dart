@@ -151,56 +151,72 @@ Future<void> _playAlarmSound() async {
               ),
               const SizedBox(height: 40),
               // Control buttons
-              Wrap(
-                spacing: 12,
-                runSpacing: 12,
+               Wrap(
+                spacing: 16, // Increased spacing between buttons
+                runSpacing: 16, // Increased vertical spacing
                 children: [
                   ElevatedButton.icon(
                     onPressed: _isRunning ? null : startTimer,
-                    icon: const Icon(Icons.play_arrow, color: Colors.white),
-                    label: const Text('Start', style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.play_arrow, color: Colors.white, size: 28), // Larger icon
+                    label: const Text(
+                      'Start',
+                      style: TextStyle(color: Colors.white, fontSize: 18), // Larger text
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blueGrey[800],
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 12,
+                        horizontal: 32, // Increased horizontal padding
+                        vertical: 18,   // Increased vertical padding
                       ),
+                      minimumSize: const Size(120, 60), // Set minimum button size
                     ),
                   ),
                   ElevatedButton.icon(
                     onPressed: _isRunning ? pauseTimer : null,
-                    icon: const Icon(Icons.pause, color: Colors.white),
-                    label: const Text('Pause', style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.pause, color: Colors.white, size: 28), // Larger icon
+                    label: const Text(
+                      'Pause',
+                      style: TextStyle(color: Colors.white, fontSize: 18), // Larger text
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange[800],
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 12,
+                        horizontal: 32, // Increased horizontal padding
+                        vertical: 18,   // Increased vertical padding
                       ),
+                      minimumSize: const Size(120, 60), // Set minimum button size
                     ),
                   ),
                   ElevatedButton.icon(
                     onPressed: resetTimer,
-                    icon: const Icon(Icons.refresh, color: Colors.white),
-                    label: const Text('Reset', style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.refresh, color: Colors.white, size: 28), // Larger icon
+                    label: const Text(
+                      'Reset',
+                      style: TextStyle(color: Colors.white, fontSize: 18), // Larger text
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red[800],
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 12,
+                        horizontal: 32, // Increased horizontal padding
+                        vertical: 18,   // Increased vertical padding
                       ),
+                      minimumSize: const Size(120, 60), // Set minimum button size
                     ),
                   ),
                   ElevatedButton.icon(
                     onPressed: addOneMinute,
-                    icon: const Icon(Icons.add, color: Colors.white),
-                    label: const Text('+1 Min', style: TextStyle(color: Colors.white)),
+                    icon: const Icon(Icons.add, color: Colors.white, size: 28), // Larger icon
+                    label: const Text(
+                      '+1 Min',
+                      style: TextStyle(color: Colors.white, fontSize: 18), // Larger text
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green[800],
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 12,
+                        horizontal: 32, // Increased horizontal padding
+                        vertical: 18,   // Increased vertical padding
                       ),
+                      minimumSize: const Size(120, 60), // Set minimum button size
                     ),
                   ),
                 ],
